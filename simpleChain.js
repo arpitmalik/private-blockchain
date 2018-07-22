@@ -169,3 +169,14 @@ function getDataFromLevelDB(key, callback) {
     callback(value);
   });
 }
+/* Testing Code */		
+// Create blockchain with blockchain variable		
+let blockchain = new Blockchain();		
+
+// Generate 10 blocks using a for loop		
+for (var i = 0; i < 10; i++) {		
+	blockchain.addBlock(new Block("test data "+(i+1)));		
+	console.log('Block #' +(i+1) + ' added.');		
+}		
+// Validate blockchain
+blockchain.validateChain();
