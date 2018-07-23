@@ -33,7 +33,10 @@ class Block{
 
 class Blockchain{
   constructor(){
-    this.addBlock(new Block("First block in the chain - Genesis block"));
+    getBlockHeightFromLevelDB(height){
+      if(!height)
+        this.addBlock(new Block("First block in the chain - Genesis block"));  
+    }
   }
 
   // Add new block
