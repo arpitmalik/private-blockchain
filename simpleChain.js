@@ -33,7 +33,7 @@ class Block{
 
 class Blockchain{
   constructor(){
-    getBlockHeightFromLevelDB(height){
+    getBlockHeightFromLevelDB(height){         // adds genesis block only if chain doesn't persist
       if(!height)
         this.addBlock(new Block("First block in the chain - Genesis block"));  
     }
